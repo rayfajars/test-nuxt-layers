@@ -1,22 +1,31 @@
 {
   "name": "test-nuxt-layers",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "main": "./nuxt.config.ts",
+  "files": [
+    "nuxt.config.ts",
+    "components",
+    "composables",
+    "utils",
+    "plugins",
+    "assets"
+  ],
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "build": "nuxt build",
+    "prepare": "nuxt prepare"
   },
+
   "dependencies": {
-    "date-fns": "^4.1.0"
+    "date-fns": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.14.0"
   },
-  "packageManager": "pnpm@10.25.0+sha512.5e82639027af37cf832061bcc6d639c219634488e0f2baebe785028a793de7b525ffcd3f7ff574f5e9860654e098fe852ba8ac5dd5cefe1767d23a020a92f501",
+
+  "peerDependencies": {
+    "nuxt": "^4.0.0"
+  },
+
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "nuxt": "^4.3.1",
-    "vue": "^3.5.28",
-    "vue-router": "^4.6.4"
+    "nuxt": "^4.3.1"
   }
 }
