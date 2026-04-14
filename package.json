@@ -1,8 +1,7 @@
 {
   "name": "test-nuxt-layers",
-  "version": "0.0.4",
+  "version": "0.0.7",
   "type": "module",
-  "main": "./nuxt.config.ts",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

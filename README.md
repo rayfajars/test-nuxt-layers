@@ -1,76 +1,62 @@
-# Nuxt Minimal Starter
+# test-nuxt-layers
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Sebuah Nuxt Layer untuk membagikan konfigurasi, komponen, dan utilitas (*utils*) antar berbagai project Nuxt.
 
-## Setup
+## Instalasi dan Penggunaan
 
-Make sure to install dependencies:
+Layer ini dapat di-*extend* (dikonsumsi) pada project Nuxt kamu melalui dua cara: memanfaatkan **NPM Registry** ataupun langsung lewat **Github**.
+
+### Opsi 1: Instalasi via NPM
+
+**Langkah 1:** Tambahkan *package* test-nuxt-layers ke project kamu.
 
 ```bash
-# npm
-npm install
+# Menggunakan npm
+npm install test-nuxt-layers
 
-# pnpm
+# Menggunakan pnpm
+pnpm add test-nuxt-layers
+
+# Menggunakan yarn
+yarn add test-nuxt-layers
+```
+
+**Langkah 2:** Daftarkan pada properti `extends` di dalam file `nuxt.config.ts` project kamu:
+
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  extends: [
+    "test-nuxt-layers"
+  ]
+});
+```
+
+---
+
+### Opsi 2: Integrasi Langsung via Github
+
+Jika kamu lebih menyukai integrasi via Github tanpa melalui NPM Registry, kamu **tidak perlu meng-install lewat command line**. Kamu hanya perlu mengubah properti `extends` di `nuxt.config.ts`.
+
+Nuxt secara cerdas akan me-resolve dan mendownloadnya otomatis (*auto-clone & caching*):
+
+```typescript
+// nuxt.config.ts
+export default defineNuxtConfig({
+  extends: [
+    "github:rayfajars/test-nuxt-layers"
+  ]
+});
+```
+
+## Pengembangan Layer (Developer)
+
+Jika kamu bermaksud *mengembangkan (dev)* atau mencoba layer ini pada server pengembangan secara lokal, jalankan *command* berikut:
+
+```bash
+# Persiapan package manager
 pnpm install
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
+# Menjalankan nuxt server
 pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-# test-nuxt-layers
