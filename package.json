@@ -1,14 +1,11 @@
 {
   "name": "test-nuxt-layers",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./nuxt.config.ts",
   "files": [
     "nuxt.config.ts",
-    "components",
-    "composables",
-    "utils",
-    "plugins",
-    "assets"
+    "app",
+    "tailwind.config.ts"
   ],
   "scripts": {
     "dev": "nuxt dev",
@@ -17,15 +14,16 @@
   },
 
   "dependencies": {
-    "date-fns": "^4.1.0",
-    "@nuxtjs/tailwindcss": "^6.14.0"
+    "date-fns": "^4.1.0"
   },
 
   "peerDependencies": {
-    "nuxt": "^4.0.0"
+    "nuxt": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^6.14.0"
   },
 
   "devDependencies": {
-    "nuxt": "^4.3.1"
+    "nuxt": "^4.3.1",
+    "@nuxtjs/tailwindcss": "^6.14.0"
   }
 }
